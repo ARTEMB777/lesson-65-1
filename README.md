@@ -1,63 +1,52 @@
-# Passport Authentication App
+# Додаток аутентифікації з Passport.js
 
-This project is an Express.js application that implements user authentication using Passport.js. It features local authentication with email and password, session management, and access control for protected routes.
+Цей проєкт — це застосунок на базі **Express.js**, який реалізує аутентифікацію користувачів за допомогою **Passport.js**. Він підтримує локальну аутентифікацію через email та пароль, управління сесіями та контроль доступу до захищених маршрутів.
 
-## Project Structure
+## Структура проєкту
 
 ```
-passport-auth-app
+lesson 65 1
 ├── src
-│   ├── app.js                # Entry point of the application
+│   ├── app.js                # Точка входу в додаток
 │   ├── config
-│   │   └── passport.js       # Passport configuration for local authentication
+│   │   └── passport.js       # Налаштування Passport для локальної аутентифікації
 │   ├── controllers
-│   │   └── authController.js  # Handles user registration, login, and logout
+│   │   └── authController.js # Обробка реєстрації, входу та виходу користувача
 │   ├── middleware
-│   │   └── authMiddleware.js   # Middleware to protect routes
+│   │   └── authMiddleware.js # Проміжне ПЗ для захисту маршрутів
 │   ├── models
-│   │   └── user.js            # User model definition
+│   │   └── user.js           # Модель користувача
 │   ├── routes
-│   │   ├── auth.js            # Routes for authentication
-│   │   └── protected.js       # Protected route requiring authentication
+│   │   ├── auth.js           # Маршрути для аутентифікації
+│   │   └── protected.js      # Захищений маршрут (потребує аутентифікації)
 │   ├── views
-│   │   ├── index.ejs          # Main view for the home page
-│   │   ├── login.ejs          # Login form view
-│   │   └── protected.ejs      # View for authenticated users
-├── package.json                # npm configuration file
-├── .env                        # Environment variables
-└── README.md                   # Project documentation
-```
+│   │   ├── index.ejs         # Головна сторінка
+│   │   ├── login.ejs         # Сторінка входу
+│   │   └── protected.ejs     # Сторінка для автентифікованих користувачів
+├── package.json              # Конфігураційний файл npm
+├── .env                      # Файл середовища
+└── README.md                 # Документація проєкту
 
-## Setup Instructions
 
-1. **Clone the repository:**
-   ```bash
+
+## Інструкції зі встановлення
+
+1. **Клонувати репозиторій:**
    git clone <repository-url>
    cd passport-auth-app
-   ```
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
 
-3. **Create a `.env` file:**
-   Copy the `.env.example` to `.env` and set the required environment variables, such as `SESSION_SECRET`.
+2. **Встановити залежності:**
+
+   yarn
+
+3. **Створити файл `.env`:**
+   Скопіюйте файл .env.example у .env та вкажіть необхідні змінні середовища, зокрема SESSION_SECRET.
 
 4. **Run the application:**
-   ```bash
-   npm start
-   ```
 
-5. **Access the application:**
-   Open your browser and navigate to `http://localhost:3000`.
+   yarn start
 
-## Usage
-
-- Navigate to the home page to find links for logging in and registering.
-- Use the login form to authenticate users.
-- Access the protected route after logging in successfully.
-
-## License
-
-This project is licensed under the MIT License.
+5. **Відкрити застосунок у браузері:**
+   Перейдіть за адресою `http://localhost:3000`.
+```
